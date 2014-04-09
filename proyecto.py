@@ -6,9 +6,9 @@ import bottle
 
 ID_afiliado = "htttwicomale-21"
 
-clave_acceso = "AKIAIJKV4RAQKPLTDABQ"
+clave_acceso = ""
 
-clave_secreta = "SUp/8hwetf/hH+q1vWG13GRSrBa7UtWy7DFOCWKd"
+clave_secreta = ""
 
 libro = raw_input("Introduce el libro a buscar: ")
 
