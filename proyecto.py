@@ -3,30 +3,47 @@ import requests
 import webbrowser
 from lxml import etree
 import bottle
+import bottlenose
 
-ID_afiliado = "htttwicomale-21"
+assoc_tag = "htttwicomale-21"
 
-clave_acceso = ""
+AWS = "AKIAIJKV4RAQKPLTDABQ"
 
-clave_secreta = ""
+secret_key = "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"
 
-libro = raw_input("Introduce el libro a buscar: ")
+amazon = bottlenose.Amazon(AWS,secret_key,assoc_tag)
 
-@bottle.route('/')
-def home_page():
-	return "Hola Mundo"
+#libro = raw_input("Introduce el libro a buscar: ")
+
+respuesta = amazon.ItemSearch(Keywords="Kindle 3G", SearchIndex="All", Service="AWSECommerceService", Version="2011-08-01")
+
+print respuesta
+
+
+
+#Posible formato de Timestamp:
+	#Timestamp=2014-04-10T16:25:07.000Z
 	
-bottle.debug(True)
-bottle.run(host='localhost')
+	
+#busqueda = amazon.ItemSearch(SearchIndex=SearchIndex,
+#ResponseGroup=ResponseGroup,
+#Keywords=Keywords)
 
+#datos = {"Service":"AWSECommerceService","Version":"2011-08-01","AssociateTag":"htttwicomale-21","Operation":"ItemSearch","SearchIndex":"Books","Keywords":"harry+potter","Timestamp":"2014-04-10T06:54:42.000Z","AWSAccessKeyId":"AKIAIJKV4RAQKPLTDABQ"}
 
-peticion = requests.get("""Service=AWSECommerceService
-Version=2011-08-01
-AssociateTag=htttwicomale-21
-Operation=ItemSearch
-SearchIndex=Books
-Keywords=harry+potter
-Timestamp=2014-04-09T18:20:56.000Z
-AWSAccessKeyId=AKIAIJKV4RAQKPLTDABQ""")
+#```python
+# Required
+#amazon = bottlenose.Amazon(AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_ASSOCIATE_TAG)
 
-print peticion.text
+# Search for a Specific Item
+#response = amazon.ItemLookup(ItemId="B007OZNUCE")
+
+# Search for Items by Keywords
+#response = amazon.ItemSearch(Keywords="Kindle 3G", SearchIndex="All")
+
+# Search for Images for an item
+#response = amazon.ItemLookup(ItemId="1449372422", ResponseGroup="Images")
+
+# Search for Similar Items
+#response = amazon.SimilarityLookup(ItemId="B007OZNUCE")
+
