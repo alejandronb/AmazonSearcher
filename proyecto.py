@@ -7,17 +7,38 @@ import bottlenose
 
 assoc_tag = "htttwicomale-21"
 
-AWS = "AKIAIJKV4RAQKPLTDABQ"
-
-secret_key = "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"
+#Las claves están en otro fichero
+AWS = "AKIAIYDSNFH3KPNNUZTA" 
+secret_key = "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"
 
 amazon = bottlenose.Amazon(AWS,secret_key,assoc_tag)
 
-#libro = raw_input("Introduce el libro a buscar: ")
+@bottle.get('/') # o @bottle.route
+def home_page():
+	return bottle.template('index.tpl')
+
+
+@bottle.post('/busqueda')
+def busqueda():
+	articulo = bottle.request.forms.get("articulo")
+
+	return bottle.template('resultado.tpl', {'articulo':articulo})
+
+
+bottle.run(host='localhost', port=8080)
 
 respuesta = amazon.ItemSearch(Keywords="Kindle 3G", SearchIndex="All", Service="AWSECommerceService", Version="2011-08-01")
 
 print respuesta
+
+
+
+#respuesta = cliente.service.GetStatusLinea("%s" % linea)
+#raiz = etree.fromstring(respuesta.encode("utf-8"))
+#raiz2 = raiz[0][0]
+#ns = "{http://tempuri.org/}"
+#print etree.tostring(raiz2, pretty_print=True)
+
 
 
 
