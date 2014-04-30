@@ -8,8 +8,8 @@ import bottlenose
 assoc_tag = "htttwicomale-21"
 
 #Las claves están en otro fichero
-AWS = "AKIAJURPOKQPQ6QLGRNQ" 
-secret_key = "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"
+AWS = "" 
+secret_key = ""
 
 amazon = bottlenose.Amazon(AWS,secret_key,assoc_tag)
 
@@ -23,12 +23,11 @@ def busqueda():
 	articulo = bottle.request.forms.get("articulo")
 	return bottle.template('resultado.tpl', {'articulo':articulo})
 	respuesta = amazon.ItemSearch(Keywords=articulo, SearchIndex="All", Service="AWSECommerceService", Version="2011-08-01")
-	arbol = etree.fromstring(respuesta)
-	raiz = arbol.find("ItemSearchResponse")
-	listaitems = raiz.find("Items")
-	NumResultados = listaitems.find("TotalResults")
-	numresul = NumResultados.text
-	print numresul
+	raiz = etree.fromstring(respuesta)
+	ns = "{http://webservices.amazon.com/AWSECommerceService/2011-08-01}"
+	listaresultados = arbol[1]
+	NumResultados = listaresultados.find(ns+"TotalResults").text #Pongo el .text al final para que obtenga directamente el valor de la etiqueta
+	
 
 
 
