@@ -6,6 +6,8 @@
 	</head>
 	<body>
 		<h1>Amazon Searcher</h1>
-		<p>Has elegido {{articulo}}</p>
+		<p>Estos son los resultados de: {{articulo}}</p>
+		<p>Número de resultados: {{NumResultados}}</p>
+		<p>Para ver los detalles del producto: <a href={{URLDetallesProducto}}>Detalles</a></p>
 	</body>
 </html>
