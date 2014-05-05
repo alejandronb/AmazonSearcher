@@ -8,8 +8,8 @@ import bottlenose
 assoc_tag = "htttwicomale-21"
 
 #Las claves están en otro fichero
-AWS = "" 
-secret_key = ""
+AWS = "AKIAIOEQVATI7LDERRMA" 
+secret_key = "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"
 
 amazon = bottlenose.Amazon(AWS,secret_key,assoc_tag)
 
@@ -21,16 +21,23 @@ def home_page():
 @bottle.post('/busqueda')
 def busqueda():
 	articulo = bottle.request.forms.get("articulo")
-	return bottle.template('resultado.tpl', {'articulo':articulo})
 	respuesta = amazon.ItemSearch(Keywords=articulo, SearchIndex="All", Service="AWSECommerceService", Version="2011-08-01")
 	raiz = etree.fromstring(respuesta)
 	ns = "{http://webservices.amazon.com/AWSECommerceService/2011-08-01}"
-	listaresultados = arbol[1]
+	listaresultados = raiz[1]
 	NumResultados = listaresultados.find(ns+"TotalResults").text #Pongo el .text al final para que obtenga directamente el valor de la etiqueta
-	
+	#MasResultados = listaresultados.find(ns+"MoreSearchResults").text
+	Item = listaresultados.find(ns+"Item")
+	URLDetallesProducto = Item.find(ns+"DetailPageURL").text
+	ItemLinks = Item.find(ns+"ItemLinks")
+	ItemLink = ItemLinks.find(ns+"ItemLink")
+	Atributos = Item.find(ns+"ItemAttributes")
+	Fabricante = Atributos.find(ns+"Manufacturer").text
+	TituloProducto = Atributos.find(ns+"Title").text
+	return bottle.template('resultado.tpl', {'articulo':articulo,'NumResultados':NumResultados,'URLDetallesProducto':URLDetallesProducto})
 
 
-
+#Mirar lo de la etiqueta MoreSearchResults
 
  # respuesta = amazon.ItemSearch(Keywords="Kindle", SearchIndex="All", Service="AWSECommerceService", Version="2011-08-01")
  # arbol = etree.fromstring(respuesta)
@@ -43,20 +50,20 @@ def busqueda():
 
 
 # This must be added in order to do correct path lookups for the views
-# import os
-# from bottle import TEMPLATE_PATH
+import os
+from bottle import TEMPLATE_PATH
 
-# ON_OPENSHIFT = False
-# if os.environ.has_key('OPENSHIFT_REPO_DIR'):
-#     ON_OPENSHIFT = True
+ON_OPENSHIFT = False
+if os.environ.has_key('OPENSHIFT_REPO_DIR'):
+    ON_OPENSHIFT = True
 
-# if ON_OPENSHIFT:
-#     TEMPLATE_PATH.append(os.path.join(os.environ['OPENSHIFT_HOMEDIR'],
-#                                       'runtime/repo/wsgi/views/'))
+if ON_OPENSHIFT:
+    TEMPLATE_PATH.append(os.path.join(os.environ['OPENSHIFT_HOMEDIR'],
+                                      'runtime/repo/wsgi/views/'))
     
-#     application=default_app()
-# else:
-#     run(host='localhost', port=8080, debug=True)
+    application=default_app()
+else:
+    bottle.run(host='localhost', port=8080)
 
 
 
