@@ -8,8 +8,8 @@ import bottlenose
 assoc_tag = "htttwicomale-21"
 
 #Las claves están en otro fichero
-AWS = "AKIAI3TJBVIRMOGMUOEQ" 
-secret_key = "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"
+AWS = "" 
+secret_key = ""
 
 amazon = bottlenose.Amazon(AWS,secret_key,assoc_tag)
 
