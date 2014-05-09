@@ -8,8 +8,8 @@ import bottlenose
 assoc_tag = "htttwicomale-21"
 
 #Las claves están en otro fichero
-AWS = "" 
-secret_key = ""
+AWS = "AKIAI3TJBVIRMOGMUOEQ" 
+secret_key = "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"
 
 amazon = bottlenose.Amazon(AWS,secret_key,assoc_tag)
 
@@ -25,20 +25,23 @@ def busqueda():
 	raiz = etree.fromstring(respuesta)
 	ns = "{http://webservices.amazon.com/AWSECommerceService/2011-08-01}"
 	listaresultados = raiz[1]
-	NumResultados = listaresultados.find(ns+"TotalResults").text #Pongo el .text al final para que obtenga directamente el valor de la etiqueta
-	#MasResultados = listaresultados.find(ns+"MoreSearchResults").text
-	Item = listaresultados.find(ns+"Item")
-	URLDetallesProducto = Item.find(ns+"DetailPageURL").text
-	ItemLinks = Item.find(ns+"ItemLinks")
-	ItemLink = ItemLinks.find(ns+"ItemLink")
-	Atributos = Item.find(ns+"ItemAttributes")
-	Fabricante = Atributos.find(ns+"Manufacturer").text
-	TituloProducto = Atributos.find(ns+"Title").text
+	listaresultados = raiz.xpath("/ns:ItemSearchResponse",namespaces = ns)
+	#NumResultados = listaresultados.find(ns+"TotalResults").text #Pongo el .text al final para que obtenga directamente el valor de la etiqueta
+	Item = raiz.xpath("/ns:ItemSearchResponse/ns:Items/ns:Item",namespaces=ns)
+	Item = listaresultados.xpath("/ns:Item",namespaces = ns)
+	# Item = listaresultados.find(ns+"Item")
+	# URLDetallesProducto = Item.find(ns+"DetailPageURL").text
+	# ItemLinks = Item.find(ns+"ItemLinks")
+	# ItemLink = ItemLinks.find(ns+"ItemLink")
+	# Atributos = Item.find(ns+"ItemAttributes")
+	# Fabricante = Atributos.find(ns+"Manufacturer").text
+	# TituloProducto = Atributos.find(ns+"Title").text
 	return bottle.template('resultado.tpl', {'articulo':articulo,'NumResultados':NumResultados,'URLDetallesProducto':URLDetallesProducto})
-
+	#listaresultados = raiz.find(ns+"Items") Sustituir el de arriba por este
 
 #Mirar lo de la etiqueta MoreSearchResults
-
+	#MasResultados = listaresultados.find(ns+"MoreSearchResults").text
+ 
  # respuesta = amazon.ItemSearch(Keywords="Kindle", SearchIndex="All", Service="AWSECommerceService", Version="2011-08-01")
  # arbol = etree.fromstring(respuesta)
  # raiz = arbol.find("ItemSearchResponse")
