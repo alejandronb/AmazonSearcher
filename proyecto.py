@@ -30,7 +30,9 @@ def busqueda():
 	#NumResultados = listaresultados.find(ns+"TotalResults").text #Pongo el .text al final para que obtenga directamente el valor de la etiqueta
 	Item = raiz.xpath("//ns:Item",namespaces={"ns":"http://webservices.amazon.com/AWSECommerceService/2011-08-01"}) #Este lo ha hecho Alberto
 	# Item = listaresultados.find(ns+"Item")
-	URLDetallesProducto = raiz.xpath("/ns:ItemSearchResponse/ns:ItemSearch/ns:Item[1]/ns:DetailPageURL/text()",namespaces={"ns":ns})
+	URLDetallesProducto = raiz.xpath("/ns:ItemSearchResponse/ns:Items/ns:Item/ns:DetailPageURL/text()",namespaces={"ns":ns})
+	for i in URLDetallesProducto:
+		Resultado1 = URLDetallesProducto[i]
 	# URLDetallesProducto = Item.find(ns+"DetailPageURL").text
 	# ItemLinks = Item.find(ns+"ItemLinks")
 	# ItemLink = ItemLinks.find(ns+"ItemLink")
