@@ -23,13 +23,14 @@ def busqueda():
 	articulo = bottle.request.forms.get("articulo")
 	respuesta = amazon.ItemSearch(Keywords=articulo, SearchIndex="All", Service="AWSECommerceService", Version="2011-08-01")
 	raiz = etree.fromstring(respuesta)
-	ns = "{http://webservices.amazon.com/AWSECommerceService/2011-08-01}"
-	listaresultados = raiz[1]
-	listaresultados = raiz.xpath("/ns:ItemSearchResponse",namespaces = ns)
+	ns = "http://webservices.amazon.com/AWSECommerceService/2011-08-01"
+	#listaresultados = raiz[1]
+	#NumResultados = raiz.xpath("//ns:ItemSearchResponse/ns:ItemSearch/ns:TotalResults/text()", namespaces={"ns":ns})
+	NumResultados = raiz.xpath("//ns:TotalResults/text()", namespaces={"ns":ns})
 	#NumResultados = listaresultados.find(ns+"TotalResults").text #Pongo el .text al final para que obtenga directamente el valor de la etiqueta
-	Item = raiz.xpath("/ns:ItemSearchResponse/ns:Items/ns:Item",namespaces=ns)
-	Item = listaresultados.xpath("/ns:Item",namespaces = ns)
+	Item = raiz.xpath("//ns:Item",namespaces={"ns":"http://webservices.amazon.com/AWSECommerceService/2011-08-01"}) #Este lo ha hecho Alberto
 	# Item = listaresultados.find(ns+"Item")
+	URLDetallesProducto = raiz.xpath("/ns:ItemSearchResponse/ns:ItemSearch/ns:Item[1]/ns:DetailPageURL/text()",namespaces={"ns":ns})
 	# URLDetallesProducto = Item.find(ns+"DetailPageURL").text
 	# ItemLinks = Item.find(ns+"ItemLinks")
 	# ItemLink = ItemLinks.find(ns+"ItemLink")
