@@ -3,6 +3,7 @@
 <html xmlns ="http://www.w3.org/1999/xhtml" xml:lang="es">
 	<head>
 		<title>Amazon Searcher</title>
+		<link rel="stylesheet" type="text/css" href="style/estilo.css">
 	</head>
 	<body>
 		<h1>Amazon Searcher</h1>
