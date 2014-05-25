@@ -1,0 +1,12 @@
+body {
+  font-family: lato;
+  font-weight: 300;
+  background: #16a085;
+  color: white;
+  padding-top: 80px;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
