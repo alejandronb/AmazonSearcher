@@ -8,8 +8,8 @@ import bottlenose
 assoc_tag = "htttwicomale-21"
 
 #Las claves están en otro fichero
-AWS = "" 
-secret_key = ""
+AWS = "AKIAIV5JMUGCLVUS72JQ" 
+secret_key = "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"
 
 amazon = bottlenose.Amazon(AWS,secret_key,assoc_tag)
 
@@ -28,18 +28,24 @@ def busqueda():
 	#NumResultados = raiz.xpath("//ns:ItemSearchResponse/ns:ItemSearch/ns:TotalResults/text()", namespaces={"ns":ns})
 	NumResultados = raiz.xpath("//ns:TotalResults/text()", namespaces={"ns":ns})
 	#NumResultados = listaresultados.find(ns+"TotalResults").text #Pongo el .text al final para que obtenga directamente el valor de la etiqueta
-	Item = raiz.xpath("//ns:Item",namespaces={"ns":"http://webservices.amazon.com/AWSECommerceService/2011-08-01"}) #Este lo ha hecho Alberto
+	Item = raiz.xpath("//ns:Item",namespaces={"ns":"http://webservices.amazon.com/AWSECommerceService/2011-08-01"})
 	# Item = listaresultados.find(ns+"Item")
-	URLDetallesProducto = raiz.xpath("/ns:ItemSearchResponse/ns:Items/ns:Item/ns:DetailPageURL/text()",namespaces={"ns":ns})
-	for i in URLDetallesProducto:
-		Resultado1 = URLDetallesProducto[i]
+	cantidad = len(Item) #Esta es la cantidad que tenemos que utilizar para enviar por ejemplo 10 detalles del producto al template
+	for i in Item:
+		for j in i:
+			if j.tag == "DetailPageURL":
+				URLDetallesProducto = j.text
+				return bottle.template('resultado.tpl', {'URLDetallesProducto':URLDetallesProducto,'cantidad':cantidad})
+#	URLDetallesProducto = raiz.xpath("/ns:ItemSearchResponse/ns:Items/ns:Item/ns:DetailPageURL/text()",namespaces={"ns":ns})
+#	for i in URLDetallesProducto:
+#		Resultado1 = URLDetallesProducto[i]
 	# URLDetallesProducto = Item.find(ns+"DetailPageURL").text
 	# ItemLinks = Item.find(ns+"ItemLinks")
 	# ItemLink = ItemLinks.find(ns+"ItemLink")
 	# Atributos = Item.find(ns+"ItemAttributes")
 	# Fabricante = Atributos.find(ns+"Manufacturer").text
 	# TituloProducto = Atributos.find(ns+"Title").text
-	return bottle.template('resultado.tpl', {'articulo':articulo,'NumResultados':NumResultados,'URLDetallesProducto':URLDetallesProducto})
+	# return bottle.template('resultado.tpl', {'articulo':articulo,'NumResultados':NumResultados,'URLDetallesProducto':URLDetallesProducto})
 	#listaresultados = raiz.find(ns+"Items") Sustituir el de arriba por este
 
 #Mirar lo de la etiqueta MoreSearchResults
