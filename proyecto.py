@@ -8,8 +8,8 @@ import bottlenose
 assoc_tag = "htttwicomale-21"
 
 #Las claves están en otro fichero
-AWS = "AKIAIV5JMUGCLVUS72JQ" 
-secret_key = "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"
+AWS = "" 
+secret_key = ""
 
 amazon = bottlenose.Amazon(AWS,secret_key,assoc_tag)
 
@@ -17,6 +17,9 @@ amazon = bottlenose.Amazon(AWS,secret_key,assoc_tag)
 def home_page():
 	return bottle.template('index.tpl')
 
+# @bottle.route('/style/<filename>')
+# def server_static(filename):
+#   return bottle.static_file(filename, root='./style')
 
 @bottle.post('/busqueda')
 def busqueda():
@@ -34,8 +37,9 @@ def busqueda():
 	for i in Item:
 		for j in i:
 			if j.tag == "DetailPageURL":
+				#print j.text
 				URLDetallesProducto = j.text
-				return bottle.template('resultado.tpl', {'URLDetallesProducto':URLDetallesProducto,'cantidad':cantidad})
+				return bottle.template('resultado.tpl', {'URLDetallesProducto':URLDetallesProducto})
 #	URLDetallesProducto = raiz.xpath("/ns:ItemSearchResponse/ns:Items/ns:Item/ns:DetailPageURL/text()",namespaces={"ns":ns})
 #	for i in URLDetallesProducto:
 #		Resultado1 = URLDetallesProducto[i]
