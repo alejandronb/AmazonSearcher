@@ -3,7 +3,12 @@
 <html xmlns ="http://www.w3.org/1999/xhtml" xml:lang="es">
 	<head>
 		<title>Amazon Searcher</title>
-		<link rel="stylesheet" type="text/css" href="style/estilo.css">
+		<!-- <link rel="stylesheet" type="text/css" href="style/estilo.css"> -->
+		<style type="text/css">
+  			h1 { color: red;  font-family: Arial;   font-size: large;  }
+ 			p  { color: gray; font-family: Verdana; font-size: medium; }
+ 			body { background: #16a085; }
+		</style>
 	</head>
 	<body>
 		<h1>Amazon Searcher</h1>
@@ -14,3 +19,8 @@
 		</form>
 	</body>
 </html>
+
+
+
+
+
