@@ -6,11 +6,11 @@
 	</head>
 	<body>
 		<h1>Amazon Searcher</h1>
-<!-- 		<p>Estos son los resultados de: {{articulo}}</p>
-		<p>Número de resultados: {{NumResultados}}</p>
-		<p>Para ver los detalles del producto: <a href={{URLDetallesProducto}}>Detalles</a></p> -->
-			{% for i in range({cantidad}) %}
-				<p>Detalles del producto: {{URLDetallesProducto}}</p>
-			{% endfor %}
+		%cont = 0
+		%for i in lista:
+			<p>Producto: {{(lista[cont])["Titulo"]}}</p>
+			<p>Para ver los detalles pulse aquí: <a href= {{(lista[cont])["URLDetalles"]}}>Detalles</a></p>
+			%cont = cont+1
+		%end
 	</body>
 </html>
