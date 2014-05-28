@@ -36,15 +36,15 @@ def busqueda():
 	cantidad = len(Items) #Esta es la cantidad que tenemos que utilizar para enviar por ejemplo 10 detalles del producto al template
 	lista = []
 	for Item in Items:
+		diccionario = {}
 		for i in Item:
-			diccionario = {}
 			if i.tag == "{%s}ItemAttributes" % ns:
 				for j in i:
 					if j.tag == "{%s}Title" % ns:
 						diccionario["Titulo"] = j.text
 			elif i.tag == "{%s}DetailPageURL" %ns:
 				diccionario["URLDetalles"] = i.text
-			lista.append(diccionario)
+		lista.append(diccionario)
 
 # Sintaxis para añadir datos a un diccionario y luego añadir éste a un diccionario:
 	# for Item in Items:
