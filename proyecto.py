@@ -31,15 +31,17 @@ def busqueda():
 	#NumResultados = raiz.xpath("//ns:ItemSearchResponse/ns:ItemSearch/ns:TotalResults/text()", namespaces={"ns":ns})
 	NumResultados = raiz.xpath("//ns:TotalResults/text()", namespaces={"ns":ns})
 	#NumResultados = listaresultados.find(ns+"TotalResults").text #Pongo el .text al final para que obtenga directamente el valor de la etiqueta
-	Item = raiz.xpath("//ns:Item",namespaces={"ns":"http://webservices.amazon.com/AWSECommerceService/2011-08-01"})
+	Items = raiz.xpath("//ns:Item",namespaces={"ns":"http://webservices.amazon.com/AWSECommerceService/2011-08-01"})
 	# Item = listaresultados.find(ns+"Item")
-	cantidad = len(Item) #Esta es la cantidad que tenemos que utilizar para enviar por ejemplo 10 detalles del producto al template
-	for i in Item:
-		for j in i:
-			if j.tag == "DetailPageURL":
-				#print j.text
-				URLDetallesProducto = j.text
-				return bottle.template('resultado.tpl', {'URLDetallesProducto':URLDetallesProducto})
+	cantidad = len(Items) #Esta es la cantidad que tenemos que utilizar para enviar por ejemplo 10 detalles del producto al template
+	lista = []
+	for Item in Items:
+		for i in Item:
+			if i.tag == "{%s}DetailPageURL" % ns:
+				#print i.text
+	 			lista.append({"URLDetallesProducto":i.text})
+	 		elif i.tag == "{%s}ItemAttributes" % ns:
+	return bottle.template('resultado.tpl', {'lista':lista})
 #	URLDetallesProducto = raiz.xpath("/ns:ItemSearchResponse/ns:Items/ns:Item/ns:DetailPageURL/text()",namespaces={"ns":ns})
 #	for i in URLDetallesProducto:
 #		Resultado1 = URLDetallesProducto[i]
