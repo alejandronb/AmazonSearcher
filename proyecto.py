@@ -37,10 +37,25 @@ def busqueda():
 	lista = []
 	for Item in Items:
 		for i in Item:
-			if i.tag == "{%s}DetailPageURL" % ns:
-				#print i.text
-	 			lista.append({"URLDetallesProducto":i.text})
-	 		elif i.tag == "{%s}ItemAttributes" % ns:
+			diccionario = {}
+			if i.tag == "{%s}ItemAttributes" % ns:
+				for j in i:
+					if j.tag == "{%s}Title" % ns:
+						diccionario["Titulo"] = j.text
+			elif i.tag == "{%s}DetailPageURL" %ns:
+				diccionario["URLDetalles"] = i.text
+			lista.append(diccionario)
+
+# Sintaxis para añadir datos a un diccionario y luego añadir éste a un diccionario:
+	# for Item in Items:
+	# 	for i in Item:
+	# 		diccionario = {}
+	# 		if i.tag == "{%s}DetailPageURL" % ns:
+	# 			#print i.text
+	#  			diccionario["URLDetallesProducto"] = i.text
+	#  		elif i.tag == "{%s}ItemAttributes" % ns:
+	#  			diccionario["url"] = 
+	# 		lista.append(diccionario)
 	return bottle.template('resultado.tpl', {'lista':lista})
 #	URLDetallesProducto = raiz.xpath("/ns:ItemSearchResponse/ns:Items/ns:Item/ns:DetailPageURL/text()",namespaces={"ns":ns})
 #	for i in URLDetallesProducto:
