@@ -90,6 +90,7 @@ def busqueda():
 # This must be added in order to do correct path lookups for the views
 import os
 from bottle import TEMPLATE_PATH
+from bottle import default_app
 
 ON_OPENSHIFT = False
 if os.environ.has_key('OPENSHIFT_REPO_DIR'):
