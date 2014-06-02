@@ -13,6 +13,7 @@
 			<input type = 'submit' value='Buscar'/>
 		</form>
 	</body>
+<!-- Hola -->
 </html>
 
 
