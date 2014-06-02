@@ -1,0 +1,433 @@
+<?xml version="1.0"?>
+<ItemSearchResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01">
+    <OperationRequest>
+        <HTTPHeaders>
+            <Header Name="UserAgent" Value="Python-urllib/2.7"></Header>
+        </HTTPHeaders>
+        <RequestId>e5b08874-3065-4bd4-bdf7-1a6b54b97f4b</RequestId>
+        <Arguments>
+            <Argument Name="Operation" Value="ItemSearch"></Argument>
+            <Argument Name="Service" Value="AWSECommerceService"></Argument>
+            <Argument Name="AssociateTag" Value="htttwicomale-21"></Argument>
+            <Argument Name="Version" Value="2011-08-01"></Argument>
+            <Argument Name="Keywords" Value="Kindle"></Argument>
+            <Argument Name="SearchIndex" Value="All"></Argument>
+            <Argument Name="Signature" Value="n5fdJfFn8IpzcxxbV7DdtT3oJulCeAuVraU2HlcJ818="></Argument>
+            <Argument Name="AWSAccessKeyId" Value="AKIAJURPOKQPQ6QLGRNQ"></Argument>
+            <Argument Name="Timestamp" Value="2014-04-29T14:08:36Z"></Argument>
+        </Arguments>
+        <RequestProcessingTime>0.0502230000000000</RequestProcessingTime>
+    </OperationRequest>
+    <ItemSearch><!-- Este elemento en realidad es: Items -->
+        <Request>
+            <IsValid>True</IsValid>
+            <ItemSearchRequest>
+                <Keywords>Kindle</Keywords>
+                <ResponseGroup>Small</ResponseGroup>
+                <SearchIndex>All</SearchIndex>
+            </ItemSearchRequest>
+        </Request>
+        <TotalResults>5583069</TotalResults>
+        <TotalPages>558307</TotalPages>
+        <MoreSearchResultsUrl>http://www.amazon.com/gp/redirect.html?camp=2025&amp;creative=386001&amp;location=http%3A%2F%2Fwww.amazon.com%2Fgp%2Fsearch%3Fkeywords%3DKindle%26url%3Dsearch-alias%253Daws-amazon-aps&amp;linkCode=xm2&amp;tag=htttwicomale-21&amp;SubscriptionId=AKIAJURPOKQPQ6QLGRNQ</MoreSearchResultsUrl>
+        <Item>
+            <ASIN>B00BWYQ9YE</ASIN>
+            <ParentASIN>B00DOPNO4M</ParentASIN>
+            <DetailPageURL>http://www.amazon.com/kindle-fire-hdx-student-gaming-tablet/dp/B00BWYQ9YE%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00BWYQ9YE</DetailPageURL>
+            <ItemLinks>
+                <ItemLink>
+                    <Description>Technical Details</Description>
+                    <URL>http://www.amazon.com/kindle-fire-hdx-student-gaming-tablet/dp/tech-data/B00BWYQ9YE%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00BWYQ9YE</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Baby Registry</Description>
+                    <URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB00BWYQ9YE%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00BWYQ9YE</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Wedding Registry</Description>
+                    <URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB00BWYQ9YE%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00BWYQ9YE</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Wishlist</Description>
+                    <URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB00BWYQ9YE%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00BWYQ9YE</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Tell A Friend</Description>
+                    <URL>http://www.amazon.com/gp/pdp/taf/B00BWYQ9YE%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00BWYQ9YE</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Customer Reviews</Description>
+                    <URL>http://www.amazon.com/review/product/B00BWYQ9YE%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00BWYQ9YE</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Offers</Description>
+                    <URL>http://www.amazon.com/gp/offer-listing/B00BWYQ9YE%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00BWYQ9YE</URL>
+                </ItemLink>
+            </ItemLinks>
+            <ItemAttributes>
+                <Manufacturer>Amazon</Manufacturer>
+                <ProductGroup>Amazon Devices</ProductGroup>
+                <Title>Kindle Fire HDX 7", HDX Display, Wi-Fi, 16 GB - Includes Special Offers</Title>
+            </ItemAttributes>
+        </Item>
+        <Item>
+            <ASIN>B007HCCNJU</ASIN>
+            <ParentASIN>B008GG93YE</ParentASIN>
+            <DetailPageURL>http://www.amazon.com/Kindle-Ereader-ebook-reader/dp/B007HCCNJU%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB007HCCNJU</DetailPageURL>
+            <ItemLinks>
+                <ItemLink>
+                    <Description>Technical Details</Description>
+                    <URL>http://www.amazon.com/Kindle-Ereader-ebook-reader/dp/tech-data/B007HCCNJU%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB007HCCNJU</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Baby Registry</Description>
+                    <URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB007HCCNJU%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB007HCCNJU</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Wedding Registry</Description>
+                    <URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB007HCCNJU%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB007HCCNJU</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Wishlist</Description>
+                    <URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB007HCCNJU%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB007HCCNJU</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Tell A Friend</Description>
+                    <URL>http://www.amazon.com/gp/pdp/taf/B007HCCNJU%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB007HCCNJU</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Customer Reviews</Description>
+                    <URL>http://www.amazon.com/review/product/B007HCCNJU%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB007HCCNJU</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Offers</Description>
+                    <URL>http://www.amazon.com/gp/offer-listing/B007HCCNJU%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB007HCCNJU</URL>
+                </ItemLink>
+            </ItemLinks>
+            <ItemAttributes>
+                <Manufacturer>Amazon</Manufacturer>
+                <ProductGroup>Amazon Devices</ProductGroup>
+                <Title>Kindle, 6" E Ink Display, Wi-Fi - Includes Special Offers (Black)</Title>
+            </ItemAttributes>
+        </Item>
+        <Item>
+            <ASIN>B00BWYRF7E</ASIN>
+            <ParentASIN>B00DOPNO4M</ParentASIN>
+            <DetailPageURL>http://www.amazon.com/Kindle-Fire-HDX-Display-Wi-Fi/dp/B00BWYRF7E%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00BWYRF7E</DetailPageURL>
+            <ItemLinks>
+                <ItemLink>
+                    <Description>Technical Details</Description>
+                    <URL>http://www.amazon.com/Kindle-Fire-HDX-Display-Wi-Fi/dp/tech-data/B00BWYRF7E%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00BWYRF7E</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Baby Registry</Description>
+                    <URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB00BWYRF7E%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00BWYRF7E</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Wedding Registry</Description>
+                    <URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB00BWYRF7E%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00BWYRF7E</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Wishlist</Description>
+                    <URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB00BWYRF7E%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00BWYRF7E</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Tell A Friend</Description>
+                    <URL>http://www.amazon.com/gp/pdp/taf/B00BWYRF7E%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00BWYRF7E</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Customer Reviews</Description>
+                    <URL>http://www.amazon.com/review/product/B00BWYRF7E%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00BWYRF7E</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Offers</Description>
+                    <URL>http://www.amazon.com/gp/offer-listing/B00BWYRF7E%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00BWYRF7E</URL>
+                </ItemLink>
+            </ItemLinks>
+            <ItemAttributes>
+                <Manufacturer>Amazon</Manufacturer>
+                <ProductGroup>Amazon Devices</ProductGroup>
+                <Title>Kindle Fire HDX 7", HDX Display, Wi-Fi, 32 GB - Includes Special Offers</Title>
+            </ItemAttributes>
+        </Item>
+        <Item>
+            <ASIN>B00AWH595M</ASIN>
+            <ParentASIN>B00DOPNK14</ParentASIN>
+            <DetailPageURL>http://www.amazon.com/Kindle-Paperwhite-Ereader/dp/B00AWH595M%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00AWH595M</DetailPageURL>
+            <ItemLinks>
+                <ItemLink>
+                    <Description>Technical Details</Description>
+                    <URL>http://www.amazon.com/Kindle-Paperwhite-Ereader/dp/tech-data/B00AWH595M%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00AWH595M</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Baby Registry</Description>
+                    <URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB00AWH595M%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00AWH595M</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Wedding Registry</Description>
+                    <URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB00AWH595M%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00AWH595M</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Wishlist</Description>
+                    <URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB00AWH595M%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00AWH595M</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Tell A Friend</Description>
+                    <URL>http://www.amazon.com/gp/pdp/taf/B00AWH595M%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00AWH595M</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Customer Reviews</Description>
+                    <URL>http://www.amazon.com/review/product/B00AWH595M%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00AWH595M</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Offers</Description>
+                    <URL>http://www.amazon.com/gp/offer-listing/B00AWH595M%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00AWH595M</URL>
+                </ItemLink>
+            </ItemLinks>
+            <ItemAttributes>
+                <Manufacturer>Amazon</Manufacturer>
+                <ProductGroup>Amazon Devices</ProductGroup>
+                <Title>Kindle Paperwhite, 6" High Resolution Display with Next-Gen Built-in Light, Wi-Fi - Includes Special Offers</Title>
+            </ItemAttributes>
+        </Item>
+        <Item>
+            <ASIN>B00CUT8AG0</ASIN>
+            <ParentASIN>B00DOPNO4M</ParentASIN>
+            <DetailPageURL>http://www.amazon.com/Kindle-Fire-HDX-Display-Wi-Fi/dp/B00CUT8AG0%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00CUT8AG0</DetailPageURL>
+            <ItemLinks>
+                <ItemLink>
+                    <Description>Technical Details</Description>
+                    <URL>http://www.amazon.com/Kindle-Fire-HDX-Display-Wi-Fi/dp/tech-data/B00CUT8AG0%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00CUT8AG0</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Baby Registry</Description>
+                    <URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB00CUT8AG0%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00CUT8AG0</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Wedding Registry</Description>
+                    <URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB00CUT8AG0%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00CUT8AG0</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Wishlist</Description>
+                    <URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB00CUT8AG0%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00CUT8AG0</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Tell A Friend</Description>
+                    <URL>http://www.amazon.com/gp/pdp/taf/B00CUT8AG0%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00CUT8AG0</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Customer Reviews</Description>
+                    <URL>http://www.amazon.com/review/product/B00CUT8AG0%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00CUT8AG0</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Offers</Description>
+                    <URL>http://www.amazon.com/gp/offer-listing/B00CUT8AG0%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00CUT8AG0</URL>
+                </ItemLink>
+            </ItemLinks>
+            <ItemAttributes>
+                <Manufacturer>Amazon</Manufacturer>
+                <ProductGroup>Amazon Devices</ProductGroup>
+                <Title>Kindle Fire HDX 7", HDX Display, Wi-Fi and 4G LTE, 16 GB - Includes Special Offers</Title>
+            </ItemAttributes>
+        </Item>
+        <Item>
+            <ASIN>B00D2KJDXA</ASIN>
+            <ParentASIN>B00DOPNO4M</ParentASIN>
+            <DetailPageURL>http://www.amazon.com/Kindle-Fire-HDX-Display-Wi-Fi/dp/B00D2KJDXA%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00D2KJDXA</DetailPageURL>
+            <ItemLinks>
+                <ItemLink>
+                    <Description>Technical Details</Description>
+                    <URL>http://www.amazon.com/Kindle-Fire-HDX-Display-Wi-Fi/dp/tech-data/B00D2KJDXA%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00D2KJDXA</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Baby Registry</Description>
+                    <URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB00D2KJDXA%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00D2KJDXA</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Wedding Registry</Description>
+                    <URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB00D2KJDXA%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00D2KJDXA</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Wishlist</Description>
+                    <URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB00D2KJDXA%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00D2KJDXA</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Tell A Friend</Description>
+                    <URL>http://www.amazon.com/gp/pdp/taf/B00D2KJDXA%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00D2KJDXA</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Customer Reviews</Description>
+                    <URL>http://www.amazon.com/review/product/B00D2KJDXA%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00D2KJDXA</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Offers</Description>
+                    <URL>http://www.amazon.com/gp/offer-listing/B00D2KJDXA%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00D2KJDXA</URL>
+                </ItemLink>
+            </ItemLinks>
+            <ItemAttributes>
+                <Manufacturer>Amazon</Manufacturer>
+                <ProductGroup>Amazon Devices</ProductGroup>
+                <Title>Kindle Fire HDX 7", HDX Display, Wi-Fi, 16 GB</Title>
+            </ItemAttributes>
+        </Item>
+        <Item>
+            <ASIN>B00CUU1CGY</ASIN>
+            <ParentASIN>B00DOPNO4M</ParentASIN>
+            <DetailPageURL>http://www.amazon.com/Kindle-Fire-HDX-Display-Wi-Fi/dp/B00CUU1CGY%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00CUU1CGY</DetailPageURL>
+            <ItemLinks>
+                <ItemLink>
+                    <Description>Technical Details</Description>
+                    <URL>http://www.amazon.com/Kindle-Fire-HDX-Display-Wi-Fi/dp/tech-data/B00CUU1CGY%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00CUU1CGY</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Baby Registry</Description>
+                    <URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB00CUU1CGY%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00CUU1CGY</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Wedding Registry</Description>
+                    <URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB00CUU1CGY%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00CUU1CGY</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Wishlist</Description>
+                    <URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB00CUU1CGY%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00CUU1CGY</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Tell A Friend</Description>
+                    <URL>http://www.amazon.com/gp/pdp/taf/B00CUU1CGY%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00CUU1CGY</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Customer Reviews</Description>
+                    <URL>http://www.amazon.com/review/product/B00CUU1CGY%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00CUU1CGY</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Offers</Description>
+                    <URL>http://www.amazon.com/gp/offer-listing/B00CUU1CGY%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00CUU1CGY</URL>
+                </ItemLink>
+            </ItemLinks>
+            <ItemAttributes>
+                <Manufacturer>Amazon</Manufacturer>
+                <ProductGroup>Amazon Devices</ProductGroup>
+                <Title>Kindle Fire HDX 7", HDX Display, Wi-Fi, 64 GB - Includes Special Offers</Title>
+            </ItemAttributes>
+        </Item>
+        <Item>
+            <ASIN>B00BGIQS1A</ASIN>
+            <DetailPageURL>http://www.amazon.com/Amazon-Kindle-USB-Power-Adapter/dp/B00BGIQS1A%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00BGIQS1A</DetailPageURL>
+            <ItemLinks>
+                <ItemLink>
+                    <Description>Technical Details</Description>
+                    <URL>http://www.amazon.com/Amazon-Kindle-USB-Power-Adapter/dp/tech-data/B00BGIQS1A%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00BGIQS1A</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Baby Registry</Description>
+                    <URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB00BGIQS1A%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00BGIQS1A</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Wedding Registry</Description>
+                    <URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB00BGIQS1A%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00BGIQS1A</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Wishlist</Description>
+                    <URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB00BGIQS1A%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00BGIQS1A</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Tell A Friend</Description>
+                    <URL>http://www.amazon.com/gp/pdp/taf/B00BGIQS1A%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00BGIQS1A</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Customer Reviews</Description>
+                    <URL>http://www.amazon.com/review/product/B00BGIQS1A%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00BGIQS1A</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Offers</Description>
+                    <URL>http://www.amazon.com/gp/offer-listing/B00BGIQS1A%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00BGIQS1A</URL>
+                </ItemLink>
+            </ItemLinks>
+            <ItemAttributes>
+                <Manufacturer>Amazon Digital Services, Inc</Manufacturer>
+                <ProductGroup>Digital Device Accessory</ProductGroup>
+                <Title>Amazon Kindle 5W USB Power Adapter</Title>
+            </ItemAttributes>
+        </Item>
+        <Item>
+            <ASIN>B00CYQPMJC</ASIN>
+            <ParentASIN>B00DOPNO4M</ParentASIN>
+            <DetailPageURL>http://www.amazon.com/Kindle-Fire-HDX-Display-Wi-Fi/dp/B00CYQPMJC%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00CYQPMJC</DetailPageURL>
+            <ItemLinks>
+                <ItemLink>
+                    <Description>Technical Details</Description>
+                    <URL>http://www.amazon.com/Kindle-Fire-HDX-Display-Wi-Fi/dp/tech-data/B00CYQPMJC%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00CYQPMJC</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Baby Registry</Description>
+                    <URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB00CYQPMJC%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00CYQPMJC</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Wedding Registry</Description>
+                    <URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB00CYQPMJC%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00CYQPMJC</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Wishlist</Description>
+                    <URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB00CYQPMJC%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00CYQPMJC</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Tell A Friend</Description>
+                    <URL>http://www.amazon.com/gp/pdp/taf/B00CYQPMJC%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00CYQPMJC</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Customer Reviews</Description>
+                    <URL>http://www.amazon.com/review/product/B00CYQPMJC%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00CYQPMJC</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Offers</Description>
+                    <URL>http://www.amazon.com/gp/offer-listing/B00CYQPMJC%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00CYQPMJC</URL>
+                </ItemLink>
+            </ItemLinks>
+            <ItemAttributes>
+                <Manufacturer>Amazon</Manufacturer>
+                <ProductGroup>Amazon Devices</ProductGroup>
+                <Title>Kindle Fire HDX 7", HDX Display, Wi-Fi, 32 GB</Title>
+            </ItemAttributes>
+        </Item>
+        <Item>
+            <ASIN>B00C5W16B8</ASIN>
+            <ParentASIN>B00DOPNMVM</ParentASIN>
+            <DetailPageURL>http://www.amazon.com/Kindle-Fire-HD-Display-Wi-Fi/dp/B00C5W16B8%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00C5W16B8</DetailPageURL>
+            <ItemLinks>
+                <ItemLink>
+                    <Description>Technical Details</Description>
+                    <URL>http://www.amazon.com/Kindle-Fire-HD-Display-Wi-Fi/dp/tech-data/B00C5W16B8%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00C5W16B8</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Baby Registry</Description>
+                    <URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB00C5W16B8%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00C5W16B8</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Wedding Registry</Description>
+                    <URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB00C5W16B8%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00C5W16B8</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Add To Wishlist</Description>
+                    <URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB00C5W16B8%26SubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00C5W16B8</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Tell A Friend</Description>
+                    <URL>http://www.amazon.com/gp/pdp/taf/B00C5W16B8%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00C5W16B8</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Customer Reviews</Description>
+                    <URL>http://www.amazon.com/review/product/B00C5W16B8%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00C5W16B8</URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Offers</Description>
+                    <URL>http://www.amazon.com/gp/offer-listing/B00C5W16B8%3FSubscriptionId%3DAKIAJURPOKQPQ6QLGRNQ%26tag%3Dhtttwicomale-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00C5W16B8</URL>
+                </ItemLink>
+            </ItemLinks>
+            <ItemAttributes>
+                <Manufacturer>Amazon</Manufacturer>
+                <ProductGroup>Amazon Devices</ProductGroup>
+                <Title>Kindle Fire HD 7", HD Display, Wi-Fi, 16 GB - Includes Special Offers</Title>
+            </ItemAttributes>
+        </Item>
+    </Items>
+</ItemSearchResponse>
