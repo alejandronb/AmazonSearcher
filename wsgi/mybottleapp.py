@@ -27,12 +27,8 @@ def busqueda():
 	respuesta = amazon.ItemSearch(Keywords=articulo, SearchIndex="All", Service="AWSECommerceService", Version="2011-08-01")
 	raiz = etree.fromstring(respuesta)
 	ns = "http://webservices.amazon.com/AWSECommerceService/2011-08-01"
-	#listaresultados = raiz[1]
-	#NumResultados = raiz.xpath("//ns:ItemSearchResponse/ns:ItemSearch/ns:TotalResults/text()", namespaces={"ns":ns})
 	NumResultados = raiz.xpath("//ns:TotalResults/text()", namespaces={"ns":ns})
-	#NumResultados = listaresultados.find(ns+"TotalResults").text #Pongo el .text al final para que obtenga directamente el valor de la etiqueta
 	Items = raiz.xpath("//ns:Item",namespaces={"ns":"http://webservices.amazon.com/AWSECommerceService/2011-08-01"})
-	# Item = listaresultados.find(ns+"Item")
 	#cantidad = len(Items) #Esta es la cantidad que tenemos que utilizar para enviar por ejemplo 10 detalles del producto al template
 	lista = []
 	for Item in Items:
@@ -45,12 +41,16 @@ def busqueda():
 			elif i.tag == "{%s}DetailPageURL" %ns:
 				diccionario["URLDetalles"] = i.text
 			elif i.tag == "{%s}ASIN" % ns:
-				ASIN = i.tag
+				ASIN = i.text
+				imagenes = amazon.ItemLookup(ItemId=i.text, ResponseGroup="Images")
 		lista.append(diccionario)
+
+	return bottle.template('resultado.tpl', {'lista':lista})
 
 
 # Búsqueda imágenes para un Item:
 #response = amazon.ItemLookup(ItemId="1449372422", ResponseGroup="Images")
+
 # Sintaxis para añadir datos a un diccionario y luego añadir éste a un diccionario:
 	# for Item in Items:
 	# 	for i in Item:
@@ -61,29 +61,23 @@ def busqueda():
 	#  		elif i.tag == "{%s}ItemAttributes" % ns:
 	#  			diccionario["url"] = 
 	# 		lista.append(diccionario)
-	return bottle.template('resultado.tpl', {'lista':lista})
+
+
+
+# Utilización de etree (anterior a xpath)
 #	URLDetallesProducto = raiz.xpath("/ns:ItemSearchResponse/ns:Items/ns:Item/ns:DetailPageURL/text()",namespaces={"ns":ns})
 #	for i in URLDetallesProducto:
 #		Resultado1 = URLDetallesProducto[i]
 	# URLDetallesProducto = Item.find(ns+"DetailPageURL").text
+	#NumResultados = listaresultados.find(ns+"TotalResults").text #Pongo el .text al final para que obtenga directamente el valor de la etiqueta
 	# ItemLinks = Item.find(ns+"ItemLinks")
 	# ItemLink = ItemLinks.find(ns+"ItemLink")
+	# Item = listaresultados.find(ns+"Item")
 	# Atributos = Item.find(ns+"ItemAttributes")
 	# Fabricante = Atributos.find(ns+"Manufacturer").text
 	# TituloProducto = Atributos.find(ns+"Title").text
 	# return bottle.template('resultado.tpl', {'articulo':articulo,'NumResultados':NumResultados,'URLDetallesProducto':URLDetallesProducto})
 	#listaresultados = raiz.find(ns+"Items") Sustituir el de arriba por este
-
-#Mirar lo de la etiqueta MoreSearchResults
-	#MasResultados = listaresultados.find(ns+"MoreSearchResults").text
- 
- # respuesta = amazon.ItemSearch(Keywords="Kindle", SearchIndex="All", Service="AWSECommerceService", Version="2011-08-01")
- # arbol = etree.fromstring(respuesta)
- # raiz = arbol.find("ItemSearchResponse")
- # listaitems = raiz.find("Items")
- # NumResultados = listaitems.find("TotalResults")
-
-
 
 
 
@@ -107,24 +101,6 @@ else:
 
 
 
-#respuesta = cliente.service.GetStatusLinea("%s" % linea)
-#raiz = etree.fromstring(respuesta.encode("utf-8"))
-#raiz2 = raiz[0][0]
-#ns = "{http://tempuri.org/}"
-#print etree.tostring(raiz2, pretty_print=True)
-
-
-
-
-#Posible formato de Timestamp:
-	#Timestamp=2014-04-10T16:25:07.000Z
-	
-	
-#busqueda = amazon.ItemSearch(SearchIndex=SearchIndex,
-#ResponseGroup=ResponseGroup,
-#Keywords=Keywords)
-
-#datos = {"Service":"AWSECommerceService","Version":"2011-08-01","AssociateTag":"htttwicomale-21","Operation":"ItemSearch","SearchIndex":"Books","Keywords":"harry+potter","Timestamp":"2014-04-10T06:54:42.000Z","AWSAccessKeyId":"AKIAIJKV4RAQKPLTDABQ"}
 
 #```python
 # Required
