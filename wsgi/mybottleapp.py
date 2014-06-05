@@ -8,8 +8,8 @@ import bottlenose
 assoc_tag = "htttwicomale-21"
 
 #Las claves están en otro fichero
-AWS = "AKIAJIUVGW6DQQEB42PA" 
-secret_key = "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"
+AWS = "" 
+secret_key = ""
 
 amazon = bottlenose.Amazon(AWS,secret_key,assoc_tag)
 
@@ -42,14 +42,38 @@ def busqueda():
 				diccionario["URLDetalles"] = i.text
 			elif i.tag == "{%s}ASIN" % ns:
 				ASIN = i.text
-				imagenes = amazon.ItemLookup(ItemId=i.text, ResponseGroup="Images")
+				response = amazon.ItemLookup(ItemId=i.text, ResponseGroup="OfferSummary")
+				precios = etree.fromstring(response)
+				ItemsPrecio = precios.xpath("//ns:Item",namespaces={"ns":"http://webservices.amazon.com/AWSECommerceService/2011-08-01"})
+				for Item in ItemsPrecio:
+					for i in Item:
+						if i.tag == "{%s}OfferSummary" % ns:
+							for j in i:
+								if j.tag == "{%s}LowestNewPrice" % ns:
+									for x in j:
+										if x.tag == "{%s}FormattedPrice" % ns:
+											diccionario["Precio"] = x.text
 		lista.append(diccionario)
 
 	return bottle.template('resultado.tpl', {'lista':lista})
 
 
-# Búsqueda imágenes para un Item:
-#response = amazon.ItemLookup(ItemId="1449372422", ResponseGroup="Images")
+#Estructura para obtener el precio:
+# for Item in ItemsPrecio:
+# 	for i in Item:
+#         if i.tag == "{%s}OfferSummary" % ns:
+#             for j in i:
+#                 if j.tag == "{%s}LowestNewPrice" % ns:
+#                     for x in j:
+#                         if x.tag == "{%s}FormattedPrice" % ns:
+#                             print x.text
+
+
+
+# Búsqueda de imágenes o precio para un Item:
+#response = amazon.ItemLookup(ItemId="B00AWH595M", ResponseGroup="Images")
+#response = amazon.ItemLookup(ItemId="B00AWH595M", ResponseGroup="OfferSummary")
+
 
 # Sintaxis para añadir datos a un diccionario y luego añadir éste a un diccionario:
 	# for Item in Items:
