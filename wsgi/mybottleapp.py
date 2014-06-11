@@ -41,9 +41,9 @@ def busqueda():
 			elif i.tag == "{%s}DetailPageURL" %ns:
 				diccionario["URLDetalles"] = i.text
 			elif i.tag == "{%s}ASIN" % ns:
-				ASIN = i.text
-				response = amazon.ItemLookup(ItemId=i.text, ResponseGroup="OfferSummary")
-				precios = etree.fromstring(response)
+				# ASIN = i.text
+				respuestaPrecios = amazon.ItemLookup(ItemId=i.text, ResponseGroup="OfferSummary")
+				precios = etree.fromstring(respuestaPrecios)
 				ItemsPrecio = precios.xpath("//ns:Item",namespaces={"ns":"http://webservices.amazon.com/AWSECommerceService/2011-08-01"})
 				for Item in ItemsPrecio:
 					for i in Item:
@@ -53,6 +53,21 @@ def busqueda():
 									for x in j:
 										if x.tag == "{%s}FormattedPrice" % ns:
 											diccionario["Precio"] = x.text
+
+				respuestaImagenes = amazon.ItemLookup(ItemId=i.text, ResponseGroup="Images")
+				imagenes = etree.fromstring(respuestaImagenes)
+				ItemsImagenes = imagenes.xpath("//ns:Item",namespaces={"ns":"http://webservices.amazon.com/AWSECommerceService/2011-08-01"})
+				for Item in ItemsImagenes:
+					for i in Item:
+						if i.tag == "{%s}MediumImage" % ns:
+							for j in i:
+								if j.tag == "{%s}URL" % ns:
+									diccionario["ImagenMediana"] = j.text
+						elif i.tag == "{%s}LargeImage" % ns:
+							for j in i:
+								if j.tag == "{%s}URL" % ns:
+									diccionario["ImagenGrande"] = j.text
+
 		lista.append(diccionario)
 
 	return bottle.template('resultado.tpl', {'lista':lista})
@@ -104,6 +119,10 @@ def busqueda():
 	#listaresultados = raiz.find(ns+"Items") Sustituir el de arriba por este
 
 
+#Esto es para vincular las hojas de estilo
+@route('/static/<filename>')
+def server_static(filename):
+  return static_file(filename, root='./static')
 
 # This must be added in order to do correct path lookups for the views
 import os
