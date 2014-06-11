@@ -120,7 +120,7 @@ def busqueda():
 
 
 #Esto es para vincular las hojas de estilo
-@route('/static/<filename>')
+@bottle.route('/static/<filename>')
 def server_static(filename):
   return static_file(filename, root='./static')
 
