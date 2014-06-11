@@ -11,6 +11,7 @@
 			<p>Producto: {{(lista[cont])["Titulo"]}}</p>
 			<p>Precio más bajo disponible: {{(lista[cont])["Precio"]}}</p>
 			<p>Para ver los detalles pulse aquí: <a href= {{(lista[cont])["URLDetalles"]}}>Detalles</a></p>
+			<img src="{{(lista[cont])["ImagenMediana"]}}"/>
 			%cont = cont+1
 		%end
 	</body>
