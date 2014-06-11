@@ -122,7 +122,7 @@ def busqueda():
 #Esto es para vincular las hojas de estilo
 @bottle.route('/static/<filename>')
 def server_static(filename):
-  return static_file(filename, root='./static')
+  return bottle.static_file(filename, root='./static')
 
 # This must be added in order to do correct path lookups for the views
 import os
