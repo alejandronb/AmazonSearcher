@@ -9,9 +9,8 @@
 		%cont = 0
 		%for i in lista:
 			<p>Producto: {{(lista[cont])["Titulo"]}}</p>
-			<p>Precio más bajo disponible: {{(lista[cont])["Precio"]}}</p>
 			<p>Para ver los detalles pulse aquí: <a href= {{(lista[cont])["URLDetalles"]}}>Detalles</a></p>
-			<img src="{{(lista[cont])["ImagenMediana"]}}"/>
+			<a href="{{(lista[cont])["ImagenGrande"]}}"><img src="{{(lista[cont])["ImagenMediana"]}}"/></a>
 			%cont = cont+1
 		%end
 	</body>
