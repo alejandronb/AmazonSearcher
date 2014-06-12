@@ -42,17 +42,17 @@ def busqueda():
 				diccionario["URLDetalles"] = i.text
 			elif i.tag == "{%s}ASIN" % ns:
 				# ASIN = i.text
-				respuestaPrecios = amazon.ItemLookup(ItemId=i.text, ResponseGroup="OfferSummary")
-				precios = etree.fromstring(respuestaPrecios)
-				ItemsPrecio = precios.xpath("//ns:Item",namespaces={"ns":"http://webservices.amazon.com/AWSECommerceService/2011-08-01"})
-				for Item in ItemsPrecio:
-					for i in Item:
-						if i.tag == "{%s}OfferSummary" % ns:
-							for j in i:
-								if j.tag == "{%s}LowestNewPrice" % ns:
-									for x in j:
-										if x.tag == "{%s}FormattedPrice" % ns:
-											diccionario["Precio"] = x.text
+				# respuestaPrecios = amazon.ItemLookup(ItemId=i.text, ResponseGroup="OfferSummary")
+				# precios = etree.fromstring(respuestaPrecios)
+				# ItemsPrecio = precios.xpath("//ns:Item",namespaces={"ns":"http://webservices.amazon.com/AWSECommerceService/2011-08-01"})
+				# for Item in ItemsPrecio:
+				# 	for i in Item:
+				# 		if i.tag == "{%s}OfferSummary" % ns:
+				# 			for j in i:
+				# 				if j.tag == "{%s}LowestNewPrice" % ns:
+				# 					for x in j:
+				# 						if x.tag == "{%s}FormattedPrice" % ns:
+				# 							diccionario["Precio"] = x.text
 
 				respuestaImagenes = amazon.ItemLookup(ItemId=i.text, ResponseGroup="Images")
 				imagenes = etree.fromstring(respuestaImagenes)
