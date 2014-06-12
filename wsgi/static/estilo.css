@@ -1,3 +1,18 @@
-h1 { color: red;  font-family: Arial;   font-size: large;  }
-p  { color: black; font-family: Verdana; font-size: medium; }
-body { background: gray; }
+h1 {
+color: white;
+font-size: 40px;
+text-align: center;
+}
+
+form p {
+color: #FFF;
+text-align: center;
+margin-top: 60px;
+font-size:20px;
+}
+
+body form {
+text-align: center;
+}
+
+body { background: #2980b9; }
