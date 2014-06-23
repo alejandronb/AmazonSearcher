@@ -3,7 +3,6 @@
 <html xmlns ="http://www.w3.org/1999/xhtml"xml:lang="es">
 	<head>
 		<title>Amazon Searcher</title>
-		<!-- Bootstrap core CSS -->
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
@@ -15,7 +14,7 @@
 		%cont = 0
 		%for i in lista:
             <div class="col-md-3">
-                <img src="{{(lista[cont])["ImagenMediana"]}}"/></a>
+<!--                 <img src="{{(lista[cont])["ImagenMediana"]}}"/></a> -->
                 <div class="texto">
                     <a href= {{(lista[cont])["URLDetalles"]}}>{{(lista[cont])["Titulo"]}}</a>
                 </div>
