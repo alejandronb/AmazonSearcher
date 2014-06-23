@@ -32,16 +32,16 @@ def busqueda():
 						diccionario["Titulo"] = j.text
 			elif i.tag == "{%s}DetailPageURL" %ns:
 				diccionario["URLDetalles"] = i.text
-			elif i.tag == "{%s}ASIN" % ns:
-				respuestaImagenes = amazon.ItemLookup(ItemId=i.text, ResponseGroup="Images")
-				imagenes = etree.fromstring(respuestaImagenes)
-				ItemsImagenes = imagenes.xpath("//ns:Item",namespaces={"ns":"http://webservices.amazon.com/AWSECommerceService/2011-08-01"})
-				for Item in ItemsImagenes:
-					for i in Item:
-						if i.tag == "{%s}MediumImage" % ns:
-							for j in i:
-								if j.tag == "{%s}URL" % ns:
-									diccionario["ImagenMediana"] = j.text
+			# elif i.tag == "{%s}ASIN" % ns:
+			# 	respuestaImagenes = amazon.ItemLookup(ItemId=i.text, ResponseGroup="Images")
+			# 	imagenes = etree.fromstring(respuestaImagenes)
+			# 	ItemsImagenes = imagenes.xpath("//ns:Item",namespaces={"ns":"http://webservices.amazon.com/AWSECommerceService/2011-08-01"})
+			# 	for Item in ItemsImagenes:
+			# 		for i in Item:
+			# 			if i.tag == "{%s}MediumImage" % ns:
+			# 				for j in i:
+			# 					if j.tag == "{%s}URL" % ns:
+			# 						diccionario["ImagenMediana"] = j.text
 						# elif i.tag == "{%s}LargeImage" % ns:
 						# 	for j in i:
 						# 		if j.tag == "{%s}URL" % ns:
