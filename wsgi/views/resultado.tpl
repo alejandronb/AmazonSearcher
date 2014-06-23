@@ -11,12 +11,11 @@
 	</head>
 	<body>
 		<h1>Amazon Searcher</h1>
-		<h2>Pulsa sobre el título para mas información</h2>
 		<div class="row">
 		%cont = 0
 		%for i in lista:
             <div class="col-md-3">
-                <a href="{{(lista[cont])["ImagenGrande"]}}"><img src="{{(lista[cont])["ImagenMediana"]}}"/></a>
+                <img src="{{(lista[cont])["ImagenMediana"]}}"/></a>
                 <div class="texto">
                     <a href= {{(lista[cont])["URLDetalles"]}}>{{(lista[cont])["Titulo"]}}</a>
                 </div>
