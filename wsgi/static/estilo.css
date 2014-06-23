@@ -4,15 +4,38 @@ font-size: 40px;
 text-align: center;
 }
 
-form p {
-color: #FFF;
+h2 {
+color: white;
+font-size: 18px;
 text-align: center;
-margin-top: 60px;
-font-size:20px;
 }
 
 body form {
+margin-top: 65px;
 text-align: center;
 }
 
-body { background: #2980b9; }
+body { background: #2980b9; 
+}
+
+input[type="text"] {
+    margin: 15px;
+    border: none;
+    border-radius: 3px;
+    color: #17181c;
+    padding: 5px 10px;
+    outline: none;
+}
+
+body form input[type=submit]{
+    background:#FFF;
+    color:#2980b9;
+    text-shadow:none;
+    border:none;
+    box-shadow:none;   
+}
+
+body form input[type=submit]:hover, body form input[type=submit]:active {
+background: #3498db;
+color: #FFF;
+}
