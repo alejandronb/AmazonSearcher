@@ -1,15 +1,23 @@
-h1 {
-color: white;
+h1 {color: white;
 font-size: 40px;
-}
+text-align: center;}
 
-form p {
-color: #FFF;
+h2 {color: white;
+    font-size: 16px;
+    text-align: left;
+    margin-top:20px;}
+
+form p {color: #FFF;
 margin-top: 60px;
-font-size:20px;
-}
+font-size:20px;}
 
-body form {
-}
+body {background: #2980b9; }
 
-body { background: #2980b9; }
+a {color:white;}
+
+.row{margin-left: 40px;
+    margin-top: 65px;}
+
+.col-md-3{width:200px;
+    height:300px;
+    overflow:hidden;}
