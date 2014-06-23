@@ -3,17 +3,20 @@
 <html xmlns ="http://www.w3.org/1999/xhtml" xml:lang="es">
 	<head>
 		<title>Amazon Searcher</title>
+		<!-- Bootstrap core CSS -->
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">	
 		<link href="/static/estilo.css" rel="stylesheet">
 	</head>
 	<body>
 		<h1>Amazon Searcher</h1>
 		<form action = '/busqueda' method='POST'>
-			<p>Bienvenido, introduce el artículo a buscar.</p>
-			<input type = 'text' name='articulo' size='50'/>
-			<input type = 'submit' value='Buscar'/>
+			<h2>Bienvenido, introduce el artículo a buscar.</h2>
+			<input type = 'text' name='articulo' size='50' placeholder='Introduzca un artículo'/>
+			<input type = 'submit' value='Buscar' class="btn btn-success" />
 		</form>
 	</body>
-<!-- Hola -->
 </html>
 
 
