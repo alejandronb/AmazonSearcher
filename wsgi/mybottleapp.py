@@ -21,9 +21,7 @@ def busqueda():
 	respuesta = amazon.ItemSearch(Keywords=articulo, SearchIndex="All", Service="AWSECommerceService", Version="2011-08-01")
 	raiz = etree.fromstring(respuesta)
 	ns = "http://webservices.amazon.com/AWSECommerceService/2011-08-01"
-	NumResultados = raiz.xpath("//ns:TotalResults/text()", namespaces={"ns":ns})
 	Items = raiz.xpath("//ns:Item",namespaces={"ns":"http://webservices.amazon.com/AWSECommerceService/2011-08-01"})
-	#cantidad = len(Items) #Esta es la cantidad que tenemos que utilizar para enviar por ejemplo 10 detalles del producto al template
 	lista = []
 	for Item in Items:
 		diccionario = {}
@@ -35,19 +33,6 @@ def busqueda():
 			elif i.tag == "{%s}DetailPageURL" %ns:
 				diccionario["URLDetalles"] = i.text
 			elif i.tag == "{%s}ASIN" % ns:
-				# ASIN = i.text
-				# respuestaPrecios = amazon.ItemLookup(ItemId=i.text, ResponseGroup="OfferSummary")
-				# precios = etree.fromstring(respuestaPrecios)
-				# ItemsPrecio = precios.xpath("//ns:Item",namespaces={"ns":"http://webservices.amazon.com/AWSECommerceService/2011-08-01"})
-				# for Item in ItemsPrecio:
-				# 	for i in Item:
-				# 		if i.tag == "{%s}OfferSummary" % ns:
-				# 			for j in i:
-				# 				if j.tag == "{%s}LowestNewPrice" % ns:
-				# 					for x in j:
-				# 						if x.tag == "{%s}FormattedPrice" % ns:
-				# 							diccionario["Precio"] = x.text
-
 				respuestaImagenes = amazon.ItemLookup(ItemId=i.text, ResponseGroup="Images")
 				imagenes = etree.fromstring(respuestaImagenes)
 				ItemsImagenes = imagenes.xpath("//ns:Item",namespaces={"ns":"http://webservices.amazon.com/AWSECommerceService/2011-08-01"})
@@ -57,15 +42,14 @@ def busqueda():
 							for j in i:
 								if j.tag == "{%s}URL" % ns:
 									diccionario["ImagenMediana"] = j.text
-						elif i.tag == "{%s}LargeImage" % ns:
-							for j in i:
-								if j.tag == "{%s}URL" % ns:
-									diccionario["ImagenGrande"] = j.text
+						# elif i.tag == "{%s}LargeImage" % ns:
+						# 	for j in i:
+						# 		if j.tag == "{%s}URL" % ns:
+						# 			diccionario["ImagenGrande"] = j.text
 
 		lista.append(diccionario)
 
 	return bottle.template('resultado.tpl', {'lista':lista})
-
 
 #Esto es para vincular las hojas de estilo
 @bottle.route('/static/<filename>')
