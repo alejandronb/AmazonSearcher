@@ -3,16 +3,26 @@
 <html xmlns ="http://www.w3.org/1999/xhtml"xml:lang="es">
 	<head>
 		<title>Amazon Searcher</title>
+		<!-- Bootstrap core CSS -->
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 		<link href="/static/estiloresultado.css" rel="stylesheet">
 	</head>
 	<body>
 		<h1>Amazon Searcher</h1>
+		<h2>Pulsa sobre el título para mas información</h2>
+		<div class="row">
 		%cont = 0
 		%for i in lista:
-			<p>Producto: {{(lista[cont])["Titulo"]}}</p>
-			<p>Para ver los detalles pulse aquí: <a href= {{(lista[cont])["URLDetalles"]}}>Detalles</a></p>
-			<a href="{{(lista[cont])["ImagenGrande"]}}"><img src="{{(lista[cont])["ImagenMediana"]}}"/></a>
+            <div class="col-md-3">
+                <a href="{{(lista[cont])["ImagenGrande"]}}"><img src="{{(lista[cont])["ImagenMediana"]}}"/></a>
+                <div class="texto">
+                    <a href= {{(lista[cont])["URLDetalles"]}}>{{(lista[cont])["Titulo"]}}</a>
+                </div>
+            </div>
 			%cont = cont+1
 		%end
+		</div>
 	</body>
 </html>
