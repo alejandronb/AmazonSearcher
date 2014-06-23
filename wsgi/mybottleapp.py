@@ -4,6 +4,10 @@ import webbrowser
 import bottle
 from lxml import etree
 import bottlenose
+import socket
+
+# timeout = 50
+# socket.setdefaulttimeout(timeout)
 
 assoc_tag = "htttwicomale-21"
 #Las claves están en otro fichero
@@ -18,7 +22,7 @@ def home_page():
 @bottle.post('/busqueda')
 def busqueda():
 	articulo = bottle.request.forms.get("articulo")
-	respuesta = amazon.ItemSearch(Keywords=articulo, SearchIndex="All", Service="AWSECommerceService", Version="2011-08-01")
+	respuesta = amazon.ItemSearch(Keywords=articulo, SearchIndex="All", Service="AWSECommerceService", Version="2011-08-01") #Petición a la API
 	raiz = etree.fromstring(respuesta)
 	ns = "http://webservices.amazon.com/AWSECommerceService/2011-08-01"
 	Items = raiz.xpath("//ns:Item",namespaces={"ns":"http://webservices.amazon.com/AWSECommerceService/2011-08-01"})
@@ -29,19 +33,19 @@ def busqueda():
 			if i.tag == "{%s}ItemAttributes" % ns:
 				for j in i:
 					if j.tag == "{%s}Title" % ns:
-						diccionario["Titulo"] = j.text
+						diccionario["Titulo"] = j.text #Aquí obtenemos el nombre del producto
 			elif i.tag == "{%s}DetailPageURL" %ns:
 				diccionario["URLDetalles"] = i.text
-			# elif i.tag == "{%s}ASIN" % ns:
-			# 	respuestaImagenes = amazon.ItemLookup(ItemId=i.text, ResponseGroup="Images")
-			# 	imagenes = etree.fromstring(respuestaImagenes)
-			# 	ItemsImagenes = imagenes.xpath("//ns:Item",namespaces={"ns":"http://webservices.amazon.com/AWSECommerceService/2011-08-01"})
-			# 	for Item in ItemsImagenes:
-			# 		for i in Item:
-			# 			if i.tag == "{%s}MediumImage" % ns:
-			# 				for j in i:
-			# 					if j.tag == "{%s}URL" % ns:
-			# 						diccionario["ImagenMediana"] = j.text
+			elif i.tag == "{%s}ASIN" % ns:
+				respuestaImagenes = amazon.ItemLookup(ItemId=i.text, ResponseGroup="Images") #Aquí pedimos imagen por cada id de producto
+				imagenes = etree.fromstring(respuestaImagenes)
+				ItemsImagenes = imagenes.xpath("//ns:Item",namespaces={"ns":"http://webservices.amazon.com/AWSECommerceService/2011-08-01"})
+				for Item in ItemsImagenes:
+					for i in Item:
+						if i.tag == "{%s}MediumImage" % ns:
+							for j in i:
+								if j.tag == "{%s}URL" % ns:
+									diccionario["ImagenMediana"] = j.text
 						# elif i.tag == "{%s}LargeImage" % ns:
 						# 	for j in i:
 						# 		if j.tag == "{%s}URL" % ns:
